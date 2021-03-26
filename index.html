@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <title>asscensor</title>
+    <title>Asscensor</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body >
+    <main>
+        <div id="contenido">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="mt-5">Ascensor</h1>
+                        <label class="mt-4"  for="numero" >¿Cuántos pisos querés?</label>
+                        <input type="number" id="numero">
+                        <button class="btn-danger btn mt-4" onclick="generarLayout()">Generar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <script src="./js/Ascensor.js"></script>
+    <script src="./js/Edificio.js"></script>
+    <script src="./js/app.js"></script>   
 </body>
 </html>
