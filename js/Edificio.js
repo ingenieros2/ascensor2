@@ -1,0 +1,24 @@
+class Edificio {
+    pisos;
+    ascensor;
+    botonera;
+
+    constructor(cantidadDePisos) {
+        this.pisos = [];
+        for (var i = 0; i < cantidadDePisos ; i++) {
+            var numeroDeImg = Math.round(Math.random()*7); 
+            /* preguntar como se usa Math */
+            this.pisos.push(`<div class="pisos"><img src="./img/piso${numeroDeImg}.jpg" alt=""></div>`);
+        }
+    }
+
+    generarPisos() {
+        var contenedorDeEdificio = document.getElementById('edificio');
+        var cadenaDePisos = this.pisos.reduce(function(acc, floor){
+            return acc + floor;
+        }, '');
+
+        contenedorDeEdificio.innerHTML = cadenaDePisos;
+    }
+
+}
