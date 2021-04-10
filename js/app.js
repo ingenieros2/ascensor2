@@ -13,25 +13,25 @@ function generarLayout() {
             <div id="edificio" class="edificio">
             
             </div>
-            <div id="ascensor" style="top: 500px;">
+            <div id="ascensor">
                 <img src="./img/ascensorabierto.png" alt="">
             </div>
         </div>   
         
-        <div class="col-6 m-0 p-0">    
+        <div class="col-6 m-0 p-5">
+            <div class="panel">
+                <div class="pantalla" id="pantalla">
+                    <h2 class="up"> PB </h2>
+                </div>
+                
+                <div class="botones" id="btn">                   
+                </div>
+            </div>
         </div>
     </div>
 </div>
 `
     contenido.innerHTML = nuevaVista;
     edificio.generarPisos();
-
-    var ascensor = new Ascensor(campo);
-    var cantidad = ascensor.filaLlamadas.length
-    for (var i = 0; i < cantidad; i++) {
-        setTimeout(function() {
-            ascensor.moverAscensor()
-        }, 4000 * i)
-        
-    }
+  
 }

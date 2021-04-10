@@ -5,6 +5,9 @@ class Edificio {
 
     constructor(cantidadDePisos) {
         this.pisos = [];
+        this.botonera = new Botonera(cantidadDePisos);
+        this.ascensor = new Ascensor(cantidadDePisos);
+        
         for (var i = 0; i < cantidadDePisos ; i++) {
             var numeroDeImg = Math.round(Math.random()*7); 
             /* preguntar como se usa Math */
@@ -19,6 +22,9 @@ class Edificio {
         }, '');
 
         contenedorDeEdificio.innerHTML = cadenaDePisos;
+
+        this.botonera.crearBotones();
+        this.ascensor.dibujarAscensor();
     }
 
 }
