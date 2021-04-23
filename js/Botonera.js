@@ -12,7 +12,6 @@ class Botonera{
 
     crearBotones(){
         var botonHtml = '';
-
         this.botones.forEach(function(boton){
             
             botonHtml +=
@@ -34,7 +33,7 @@ class Botonera{
         var boton = this.botones.find(function(boton) {
             return boton.id === idBoton;
         })
-
+        
         boton.apretarBoton();
     }
 

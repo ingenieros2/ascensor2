@@ -1,9 +1,13 @@
 var contenido = document.getElementById('contenido');
 var pisos = [];
 var edificio = null;
+var sonido = document.getElementById('sonido');
+
+
 
 function generarLayout() {
     var campo = document.getElementById('numero').value;
+    sonido.innerHTML += '<audio src="./audio/sonido.mp3" autoplay></audio>'
     edificio = new Edificio(campo);
     var nuevaVista = 
 `
@@ -33,5 +37,4 @@ function generarLayout() {
 `
     contenido.innerHTML = nuevaVista;
     edificio.generarPisos();
-  
 }

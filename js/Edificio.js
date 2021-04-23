@@ -24,7 +24,7 @@ class Edificio {
         contenedorDeEdificio.innerHTML = cadenaDePisos;
 
         this.botonera.crearBotones();
-        this.ascensor.dibujarAscensor();
+        this.ascensor.iniciarAscensor();
     }
 
 }

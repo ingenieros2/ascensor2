@@ -21,7 +21,6 @@ class Boton{
     }
 
     apretarBoton() {
-        
         var estado = edificio.ascensor.agregarPiso(this.id)
         this.cambiarEstadoBoton(estado);
     }
